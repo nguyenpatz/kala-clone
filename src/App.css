@@ -1,38 +1,488 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Lexend", sans-serif;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+.header {
+  background: #008200;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 144rem;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+.Header-wrapper {
+  height: 2.4rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.Header-item {
+  margin-left: 2rem;
+}
+
+.Header-item-icon {
+  flex: 0 0 1rem;
+  margin-right: 0.6rem;
+  max-width: 2.2rem;
+}
+
+.Header-item-label {
+  color: #fff;
+  white-space: nowrap;
+}
+
+.icon-bell {
+  color: #fff;
+}
+
+.HeaderSearch {
+  background: #f6f6f7;
+}
+
+.HeaderSearch .container {
+  height: 136px;
+  /*  display: flex;
+  align-items: center; */
+}
+
+.HeaderSearch-logo {
+  margin-right: auto;
+  max-width: 18.5rem;
+}
+
+.HeaderSearch-logo img {
+  width: 50%;
+  vertical-align: middle;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.HeaderSearch-search {
+  background: #fff;
+  border-radius: 3rem;
+  flex: 1 1;
+  margin: auto;
+  margin-right: 100px;
+  /* max-width: 67rem; */
+  width: 500px;
+  /* max-width: 40rem; */
+  overflow: hidden;
+}
+
+.HeaderSearch-search .Input {
+  width: 100%;
+}
+
+.HeaderSearch-search .Input .ant-input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.Input .ant-input {
+  border-radius: 1rem;
+  box-shadow: none;
+  font-size: 0.7rem;
+  min-height: 1.2rem;
+  height: 1.5rem;
+  padding: 1rem 1.5rem;
+}
+
+.ant-input:placeholder-shown {
+  text-overflow: ellipsis;
+}
+
+.HeaderSearch-search .Button .ant-btn {
+  border-radius: 3rem;
+  width: 100%;
+  height: 32px;
+}
+
+.Button .ant-btn.ant-btn-primary {
+  background: #008200;
+  border-color: #008200;
+  color: #fff;
+}
+
+.Button .ant-btn {
+  align-items: center;
+  box-shadow: 0 4px 20px 5px rgb(0 0 0 / 5%);
+  cursor: pointer;
+  display: flex;
+  font-size: 1.8rem;
+  justify-content: center;
+  padding: 0 1rem;
+  width: 100%;
+  border: none;
+}
+
+.HeaderSearch-account-link {
+  text-transform: uppercase;
+  color: #3b4045;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.HeaderSearch-account-link:hover {
+  text-decoration: underline;
+}
+
+.Icon {
+  width: 100%;
+  height: 100%;
+}
+
+.icon-search {
+  font-size: 1.3rem;
+}
+
+.home-container {
+  max-width: 1076px;
+  margin: auto;
+}
+.slider-container {
+  /* max-width: 1076px; */
+  width: 100%;
+  position: relative;
+  /* margin: auto; */
+}
+
+.mySlides {
+  height: 464px;
+  /* display: none; */
+}
+
+.nextSlide {
+  display: none;
+}
+
+.activeSlide {
+  display: block;
+}
+
+.lastSlide {
+  display: none;
+}
+
+.mySlides img {
+  border-style: none;
+  height: 100%;
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.slider-container {
+  margin-top: 40px;
+}
+
+.BooksCarousel {
+  /* padding: 3rem 0 6rem; */
+  margin-top: 50px;
+}
+
+.Button.ant-btn {
+  align-items: center;
+  border-radius: 3rem;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 20px 5px rgb(0 0 0 / 5%);
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: capitalize;
+  justify-content: center;
+  padding: 0 1rem;
+  width: 100%;
+  height: 2rem;
+  color: #008200;
+}
+
+.ant-btn > span {
+  display: inline-block;
+}
+
+.BooksCarousel-arrow button {
+  border-radius: 100%;
+  border: 1px solid #008200;
+  color: #008200;
+  cursor: pointer;
+}
+
+.BooksCarousel-arrow button:not(:last-child) {
+  margin-right: 10px;
+  margin-left: 30px;
+}
+
+.BooksList {
+  padding: 28px 0px;
+}
+
+.BookBlock {
+  width: 15.313rem;
+}
+
+.BookBlock:not(:last-child) {
+  /* align-items: center;
+  justify-content: center; */
+  padding-right: 14px;
+}
+
+.BookBlock .BookBlock-image {
+  width: 200px;
+}
+
+.BookBlock .BookBlock-image img {
+  /* max-width: 200px; */
+  width: 100%;
+  height: 272px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+.BookBlock-title {
+  font-size: 0.875rem;
+  text-align: center;
+  height: 45.5px;
+  width: 100%;
+}
+
+.BookBlock-author {
+  font-size: 0.7rem;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.BookBlock-price {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.BookBlock-price del {
+  font-size: 0.7rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.BookBlock-price span {
+  padding-left: 8px;
+  font-size: 0.788rem;
+  color: #008200;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.BookBlock-action .BookBlock-icon button {
+  border: 1px solid transparent;
+  background: #008200;
+  color: #fff;
+  padding: 7px 7px;
+  border-radius: 5px;
+}
+
+.BookBlock-action .BookBlock-icon button .shopping {
+  font-size: 1.5rem;
+}
+
+.BookBlock-action .BookBlock-outline button {
+  border: 1px solid #008200;
+  background: #fff;
+  padding: 12.8px 12.8px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.other-background {
+  background: #f6f6f7;
+}
+
+.newsItem {
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.newsItem .newsItem-info {
+  padding: 10px 10px;
 }
 
-@keyframes App-logo-spin {
+.newsItem .newsItem-img {
+  width: 15rem;
+  height: 10rem;
+}
+
+.newsItem .newsItem-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.newsItem .newsItem-title {
+  margin-bottom: 16px;
+}
+
+.newsItem .newsItem-title div {
+  font-size: 0.8rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.newsItem .newsItem-content div {
+  font-size: 0.8rem;
+  color: #808080;
+  overflow: hidden;
+  line-height: 1.2rem;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 23;
+  -webkit-box-orient: vertical;
+}
+
+.NewsTab-action {
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.NewsTab-action div:not(:last-child) {
+  margin-right: 21px;
+}
+
+.newsItem-info .newsItem-title,
+.newsItem-info .newsItem-content {
+  max-width: 16rem;
+
+}
+
+.newsItem-info .newsItem-content {
+  margin-bottom: 8px;
+}
+
+.newsItem-info .newsItem-content div {
+  font-size: 0.8rem;
+
+}
+
+.newsItem-info .newsItem-title div {
+  width: 100%;
+}
+
+.newsItem-info .newsItem-date {
+  justify-content: space-between;
+}
+
+.newsItem-info .newsItem-date div,
+.newsItem-info .newsItem-date div button {
+  font-size: 0.7rem;
+}
+
+.newsItem-info .newsItem-date div {
+  color: #008200;
+}
+
+.footer {
+  background: #d4e1c2;
+  padding: 56px 0px 40px 0px;
+}
+
+.footer .container .footer-logo {
+  max-width: 6.5rem;
+} 
+
+.footer .container .footer-logo img {
+  width: 100%;
+}
+
+
+.footer-logo span{
+  font-size: 0.7rem;
+}
+
+.footer-info {
+  /* justify-content: flex-start; */
+}
+
+.footer-info .footer-info-link a{
+  text-decoration: none;
+  color: #3b4045;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.footer-app-image {
+  /* justify-content: center; */
+}
+
+.img1 .qr{
+  width: 96px;
+  margin-right: 20px;
+}
+
+@keyframes fade {
   from {
-    transform: rotate(0deg);
+    opacity: 0.4;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .Header-item-icon {
+    flex: 0 0 0.4rem;
+    margin-right: 1.2rem;
+    max-width: 2.2rem;
+  }
+
+  .Header-item {
+    margin-left: 1.4rem;
+  }
+
+  .Header-wrapper {
+    width: 100%;
+    justify-content: center !important;
+  }
+  .news {
+    flex-direction: column;
+  }
+
+  .newsItem .newsItem-img {
+    width: 100%;
+  }
+
+  .newsItem .newsItem-img img {
+    object-fit: cover;
   }
 }
