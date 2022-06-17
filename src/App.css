@@ -162,7 +162,8 @@
   height: 100%;
   width: 100%;
   align-items: center;
-  padding: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 
@@ -306,7 +307,7 @@
   width: 15.313rem;
 }
 
-.BookBlock:not(:last-child) {
+.BookBlock {
   /* align-items: center;
   justify-content: center; */
   padding-right: 14px;
