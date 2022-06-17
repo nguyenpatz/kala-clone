@@ -608,13 +608,20 @@
     font-size: 0.788rem;
   }
 
+  .BooksList {
+    justify-content: center;
+  }
+
   .BookBlock {
     width: 11.938rem;
   }
- 
 
   .BookBlock .BookBlock-image {
     width: 163px;
+  }
+
+  .BookBlock .BookBlock-image .BookBlock-image-front {
+    /* width: 100%; */
   }
 
   .BookBlock .BookBlock-title {
@@ -627,5 +634,18 @@
 
   .BookBlock-action .BookBlock-outline button {
     width: 121px;
+  }
+
+  .footer .container {
+    flex-direction: column;
+  }
+
+  .newsItem {
+    align-items: flex-start
+  }
+
+  .newsItem-info .newsItem-title,
+  .newsItem-info .newsItem-content {
+    max-width: 100%;
   }
 }

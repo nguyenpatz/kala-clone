@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { useGlobalContext } from "../context";
 import Book from "./Book";
@@ -23,15 +23,38 @@ const BookCarousel = ({ book, name }) => {
 	// 		</div>
 
 	const [screenWidth, setScreenWidth] = useState();
-	const valueWidth = useRef();
+	const [newBook, setNewBook] = useState([]);
+	const [count, setCount] = useState(5);
+	const valueWidth = useRef(null);
 
 	let newItem = [];
-	for (let i = 0; i < book.length - 1; i++) {
-		newItem.push(book[i]);
-	}
+
+	useEffect(() => {
+		// console.log(valueWidth.current.getBoundingClientRect());
+		const div = valueWidth.current;
+		const rect = div.getBoundingClientRect();
+		if(rect.width <= 800) {
+			setCount(2);
+		}
+		
+	}, []);
+
+	useEffect(() => {
+		let newArr = [];
+		for(let i = 0; i < count; i++) {
+			newArr.push(book[i]);
+		}
+		setNewBook([...newArr]);
+	}, [count]);
+
+	// console.log(newItem);
+	for (let i = 0; i < count; i++) {
+			newItem.push(book[i]);
+		}
+
 	return (
 		<div className={`BooksCarousel`}>
-			<div className="BooksCarousel-wrapper">
+			<div className="BooksCarousel-wrapper" ref={valueWidth}>
 				<div className="BooksCarousel-header flex justify-between items-center">
 					<div className="BooksCarousel-header-col">
 						<div className="BooksCarousel-title">{name}</div>
@@ -57,7 +80,7 @@ const BookCarousel = ({ book, name }) => {
 				</div>
 				{/*	book paper list*/}
 				<div className="BooksList flex">
-					{newItem.map((item) => {
+					{newBook.map((item) => {
 						return <Book {...item} />;
 					})}
 				</div>
