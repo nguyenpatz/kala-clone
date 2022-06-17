@@ -466,20 +466,31 @@
 .footer {
   background: #d4e1c2;
   padding: 56px 0px 40px 0px;
+  color: #3b4045;
+}
+
+.footer-col {
+  max-width: 15.547rem;
+  width: 100%;
 }
 
 .footer .container .footer-logo {
-  max-width: 6.5rem;
+  /* max-width: 6.5rem; */
 } 
 
 .footer .container .footer-logo img {
-  width: 100%;
+  width: 50%;
 }
 
 
 .footer-logo span{
   font-size: 0.7rem;
 }
+
+.footer-logo-info span{
+  width: 100%;
+}
+
 
 .footer-info {
   /* justify-content: flex-start; */
@@ -500,6 +511,14 @@
   width: 96px;
   margin-right: 20px;
 }
+
+.footer-app-title h2,
+.footer-info-title h2 {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+
 
 @keyframes fade {
   from {
