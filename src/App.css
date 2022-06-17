@@ -65,6 +65,7 @@
 }
 
 .HeaderSearch {
+  height: 136px;
   background: #f6f6f7;
 }
 
@@ -88,29 +89,27 @@
   justify-content: center;
 }
 
-.HeaderSearch-search {
+/* .HeaderSearch-search {
   background: #fff;
   border-radius: 3rem;
   flex: 1 1;
   margin: auto;
   margin-right: 100px;
-  /* max-width: 67rem; */
   width: 500px;
-  /* max-width: 40rem; */
   overflow: hidden;
-}
+} */
 
-.HeaderSearch-search .Input {
-  width: 100%;
-}
+  /* .HeaderSearch-search .Input {
+    width: 100%;
+  }
 
-.HeaderSearch-search .Input .ant-input {
-  border: none;
-  outline: none;
-  width: 100%;
-}
+  .HeaderSearch-search .Input .ant-input {
+    border: none;
+    outline: none;
+    width: 100%;
+  } */
 
-.Input .ant-input {
+/* .Input .ant-input {
   border-radius: 1rem;
   box-shadow: none;
   font-size: 0.7rem;
@@ -118,24 +117,24 @@
   height: 1.5rem;
   padding: 1rem 1.5rem;
 }
-
-.ant-input:placeholder-shown {
+ */
+/* .ant-input:placeholder-shown {
   text-overflow: ellipsis;
 }
-
-.HeaderSearch-search .Button .ant-btn {
+ */
+/* .HeaderSearch-search .Button .ant-btn {
   border-radius: 3rem;
   width: 100%;
   height: 32px;
-}
-
+} */
+/* 
 .Button .ant-btn.ant-btn-primary {
   background: #008200;
   border-color: #008200;
   color: #fff;
 }
-
-.Button .ant-btn {
+ */
+/* .Button .ant-btn {
   align-items: center;
   box-shadow: 0 4px 20px 5px rgb(0 0 0 / 5%);
   cursor: pointer;
@@ -145,17 +144,68 @@
   padding: 0 1rem;
   width: 100%;
   border: none;
-}
-
+} */
+/* 
 .HeaderSearch-account-link {
   text-transform: uppercase;
   color: #3b4045;
   font-size: 0.9rem;
   cursor: pointer;
+} */
+
+/* .HeaderSearch-account-link:hover {
+  text-decoration: underline;
+} */
+
+
+.HeaderSearch-wrapper {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  padding: 20px;
 }
 
-.HeaderSearch-account-link:hover {
-  text-decoration: underline;
+
+.HeaderSearch-logo,
+.HeaderSearch-form {
+  flex-grow: 1;
+}
+
+.HeaderSearch-shopping {
+  flex-basis: 30px;
+  text-align: right;
+  font-size: 1.6rem;
+}
+
+
+.HeaderSearch-form form input,
+.HeaderSearch-form form button {
+  border: none;
+  font-size: 1rem;
+}
+
+.HeaderSearch-form form input {
+  flex-basis: 500px;
+  outline: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+   border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 8px 12px;
+} 
+
+.HeaderSearch-form form button {
+  flex-basis: 70px;
+  border-radius: 20px;
+  background: #008200;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 198px;
 }
 
 .Icon {
@@ -276,10 +326,10 @@
 }
 
 .BookBlock-title {
-  font-size: 0.875rem;
+  font-size: 1rem;
   text-align: center;
   height: 45.5px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .BookBlock-author {
@@ -484,5 +534,10 @@
 
   .newsItem .newsItem-img img {
     object-fit: cover;
+  }
+
+  .HeaderSearch-search, 
+  .HeaderSearch-account {
+    display: none;
   }
 }
