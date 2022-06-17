@@ -18,9 +18,11 @@ const Footer = () => {
 					<div className="footer-logo-info">
 						<span>
 							GPKD số 10001
-							<br />
-							Cấp ngày 20/10/2020
+
+							
 						</span>
+						<br />
+						<span>Cấp ngày 20/10/2020</span>
 					</div>
 					<div className="footer-logo-info">
 						<IoLocationOutline />
